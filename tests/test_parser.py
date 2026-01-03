@@ -1,18 +1,31 @@
-from analyzer.parser import parse_line
+from datetime import datetime
+
+from analyzer.model import LogEntry
+from analyzer.parser import parse_lines
 
 
-def test_parse_valid_log_line():
-    line = "2025-01-01 10:01:05 ERROR OrderService Failed to create order"
-    event = parse_line(line)
+def test_parse_new_format_with_service():
+    lines = [
+        "2025-01-01T10:00:00 auth-service ERROR boom"
+    ]
 
-    assert event is not None
-    assert event.level == "ERROR"
-    assert event.service == "OrderService"
-    assert "Failed to create order" in event.message
+    entries = parse_lines(lines)
+
+    assert entries == [
+        LogEntry(
+            timestamp=datetime(2025, 1, 1, 10, 0, 0),
+            service="auth-service",
+            level="ERROR",
+            message="boom",
+        )
+    ]
 
 
-def test_parse_invalid_log_line_returns_none():
-    line = "this is not a valid log line"
-    event = parse_line(line)
+def test_parse_old_format_without_service():
+    lines = [
+        "2025-01-01T10:00:00 ERROR boom"
+    ]
 
-    assert event is None
+    entries = parse_lines(lines)
+
+    assert entries[0].service is None

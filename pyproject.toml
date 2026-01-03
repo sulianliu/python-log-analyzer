@@ -1,10 +1,16 @@
+[build-system]
+requires = ["setuptools>=65", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "python-log-analyzer"
 version = "0.1.0"
-description = "A production-style Python 3 CLI tool for deterministic log analysis."
-requires-python = ">=3.11"
-readme = "README.md"
-license = { text = "MIT" }
+description = "A simple log analyzer"
+requires-python = ">=3.10"
+license = "MIT"
+
+[tool.setuptools]
+packages = ["analyzer", "cli"]
 
 [project.scripts]
-log-analyzer = "analyzer.cli:main"
+log-analyzer = "cli.main:main"

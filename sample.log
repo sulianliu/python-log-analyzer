@@ -1,4 +1,5 @@
-2025-01-01 10:01:02 INFO AuthService User login success
-2025-01-01 10:01:05 ERROR OrderService Failed to create order
-2025-01-01 10:01:06 WARN AuthService Token about to expire
-2025-01-01 10:01:07 ERROR OrderService Database timeout
+2025-01-01T10:00:00 auth-service INFO Auth service started
+2025-01-01T10:01:00 order-service INFO Order created
+2025-01-01T10:02:00 auth-service ERROR Invalid token
+2025-01-01T10:03:00 order-service ERROR Database timeout
+2025-01-01T10:04:00 auth-service INFO Retry successful
