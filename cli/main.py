@@ -18,13 +18,26 @@ def main():
         default=1,
         help="Minimum number of ERROR logs to trigger error-count rule",
     )
+    parser.add_argument(
+        "--service",
+        help="Service name to filter (default: all services)",
+    )
+
+    parser.add_argument(
+        "--service-error-threshold",
+        type=int,
+        default=1,
+        help="ERROR count threshold per service",
+    )
     args = parser.parse_args()
 
     with open(args.file) as f:
         entries = parse_lines(f)
 
     registry = create_default_registry(
-        error_threshold=args.error_threshold
+        error_threshold=args.error_threshold,
+        service_error_threshold=args.service_error_threshold,
+        service=args.service,
     )
 
     if args.rules:

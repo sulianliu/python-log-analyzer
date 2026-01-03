@@ -1,6 +1,8 @@
 from typing import Iterable
-from .rules import Rule
+
 from .model import AnalysisResult, LogEntry
+from .rules import Rule
+
 
 class AnalyzerEngine:
     def __init__(self, rules: Iterable[Rule]):

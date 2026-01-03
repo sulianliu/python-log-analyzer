@@ -2,4 +2,5 @@
 2025-01-01T10:01:00 order-service INFO Order created
 2025-01-01T10:02:00 auth-service ERROR Invalid token
 2025-01-01T10:03:00 order-service ERROR Database timeout
+2025-01-01T10:03:00 order-service ERROR Failed to create order
 2025-01-01T10:04:00 auth-service INFO Retry successful

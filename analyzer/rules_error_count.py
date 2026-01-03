@@ -1,4 +1,5 @@
-from analyzer.model import LogEntry, AnalysisResult
+from analyzer.model import AnalysisResult
+
 
 class ErrorCountRule:
     name = "error-count"

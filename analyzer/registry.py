@@ -1,5 +1,7 @@
 from typing import Dict, Iterable
+
 from analyzer.rules import Rule
+
 
 class RuleRegistry:
     def __init__(self):
