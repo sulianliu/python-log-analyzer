@@ -2,6 +2,7 @@ from analyzer.cli import parse_args
 from analyzer.parser import parse_line
 from analyzer.stats import top_services
 
+
 def main() -> None:
     args = parse_args()
     events = []
@@ -17,6 +18,7 @@ def main() -> None:
     print(f"Top {args.top} services with level {args.level}:")
     for service, count in results:
         print(f"{service}: {count}")
+
 
 if __name__ == "__main__":
     main()

@@ -1,5 +1,7 @@
 from collections import Counter
+
 from analyzer.model import LogEvent
+
 
 def top_services(events: list[LogEvent], level: str, top_n: int) -> list[tuple[str, int]]:
     counter: Counter[str] = Counter()

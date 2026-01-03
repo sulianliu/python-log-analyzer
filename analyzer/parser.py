@@ -1,5 +1,7 @@
 from datetime import datetime
+
 from analyzer.model import LogEvent
+
 
 def parse_line(line: str) -> LogEvent | None:
     parts = line.strip().split(" ", 4)

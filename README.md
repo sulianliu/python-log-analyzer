@@ -1,12 +1,14 @@
 # python-log-analyzer
 
-A production-style Python 3 CLI tool for deterministic log analysis, designed with clean architecture and long-term evolvability in mind.
+A production-style Python 3 CLI tool for deterministic log analysis, designed with clean architecture and long-term
+evolvability in mind.
 
 ---
 
 ## Overview
 
-`python-log-analyzer` is a command-line tool for analyzing application logs in a **deterministic, explainable, and streaming-friendly** way.
+`python-log-analyzer` is a command-line tool for analyzing application logs in a **deterministic, explainable, and
+streaming-friendly** way.
 
 The project is intentionally designed as a **clean, framework-free Python 3 codebase**, emphasizing:
 
@@ -35,7 +37,8 @@ It is structured as a **long-lived engineering project**.
   Uses Python standard library wherever possible to reduce complexity.
 
 - **Evolvable by design**  
-  The architecture allows future extensions such as structured output formats, time-window analysis, or AI-assisted explanation layers without rewriting the core.
+  The architecture allows future extensions such as structured output formats, time-window analysis, or AI-assisted
+  explanation layers without rewriting the core.
 
 ---
 
