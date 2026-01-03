@@ -1,0 +1,10 @@
+[project]
+name = "python-log-analyzer"
+version = "0.1.0"
+description = "A production-style Python 3 CLI tool for deterministic log analysis."
+requires-python = ">=3.11"
+readme = "README.md"
+license = { text = "MIT" }
+
+[project.scripts]
+log-analyzer = "analyzer.cli:main"
